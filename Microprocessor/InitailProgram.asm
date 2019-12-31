@@ -1,6 +1,5 @@
 ;64bit program helloworld!------------------------------------------------------------------------
 
-
 section .data
 	hello db 'Hello World!',10
 	helloLen: equ $-hello
@@ -16,7 +15,6 @@ _start:
 	mov rax,60
 	xor rdi,rdi
 	syscall
-	
   
 ;-------------------------------------------------------------------------------------------------  
 ;Output-
@@ -26,4 +24,3 @@ _start:
 ;student@IOE-HWLAB:~/Documents/ABHI rno.43$ ld -o hello hello.o
 ;student@IOE-HWLAB:~/Documents/ABHI rno.43$ ./hello
 ;Hello World!
-
