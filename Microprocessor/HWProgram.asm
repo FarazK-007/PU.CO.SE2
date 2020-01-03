@@ -18,9 +18,9 @@ _start:
   
 ;-------------------------------------------------------------------------------------------------  
 ;Output-
-;student@IOE-HWLAB:~/Documents/ABHI rno.43$ nasm -f elf32 mprno43_intr1_64b.asm -o hello.o
+;student@IOE-HWLAB:~/Documents$ nasm -f elf32 HWProgram.asm -o hello.o
 ;mprno43_pr1_64b.asm:9-15: error: instruction not supported in 32-bit mode
-;student@IOE-HWLAB:~/Documents/ABHI rno.43$ nasm -f elf64 mprno43_intr1_64b.asm -o hello.o
-;student@IOE-HWLAB:~/Documents/ABHI rno.43$ ld -o hello hello.o
-;student@IOE-HWLAB:~/Documents/ABHI rno.43$ ./hello
+;student@IOE-HWLAB:~/Documents$ nasm -f elf64 HWProgram.asm -o hello.o
+;student@IOE-HWLAB:~/Documents$ ld -o hello hello.o
+;student@IOE-HWLAB:~/Documents$ ./hello
 ;Hello World!
