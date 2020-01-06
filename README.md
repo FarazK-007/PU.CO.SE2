@@ -1,2 +1,2 @@
-# PU.CO.SE2
-PU Computer Engineering Second Year Sem 2
+# PU.CO.SE2 SPPU
+SSPU Computer Engineering Second Year Sem 2
