@@ -27,4 +27,3 @@ _print:
 ;student@IOE-HWLAB:~/AB02SE2B$ ld -o hello hello.o
 ;student@IOE-HWLAB:~/AB02SE2B$ ./hello
 ;Hello Print Function!
-
