@@ -1,29 +1,21 @@
 #include<iostream>
 #include<stdio.h>
 #include<graphics.h>
-using namespace std;
 
+using namespace std;
 int gd = DETECT,gm;
 
 class Pixel{
-
-
 	public:
-	
 		float D_Of(float B,float A,float D){
 			return ((B-A)/D);
 		}
-
-
 		int sign(float B){
 			return ((B<0)?-1:((B==0)?0:1));
 		}
-
-		int sign(int v1,int v2)
-		{
+		int sign(int v1,int v2){
 			return((v1==v2)?0:((v1>v2)?-1:1));	
 		}
-		
 };
 
 class Shape : public Pixel
@@ -38,8 +30,6 @@ class Shape : public Pixel
 			delay(2000);
 			int gd = DETECT,gm;
 			initgraph(&gd,&gm,NULL);
-	
-
 			{
 		
 				float dX,dY;
@@ -62,23 +52,17 @@ class Shape : public Pixel
 				float i=1;
 				while(i<=length)
 				{
-			
-			
 					pX+=(dX);
 					pY+=(dY);
-			
 					putpixel(pX,pY,WHITE);
 					i++;
 				}
-		
 			}
 			cout<<"\nLine Plotted Using DDA Line Drawing Algorithm";
 			delay(20000);
 			closegraph();
 		}
-		
-		
-		
+			
 		void drawLine(int x1, int y1, int x2, int y2)
 		{
 			int Dx, Dy, E, ICValue=0, I;
@@ -94,19 +78,15 @@ class Shape : public Pixel
 			if(Dy>Dx)
 				{
 					ICValue = 1;
-			
 					int Temp = Dx;
 					Dx = Dy;
 					Dy = Temp;		
-		
 				}
 		
 			E = 2*Dy - Dx;
-	
 			for(I=0; I<=Dy; I++)
 			{
 				putpixel(X,Y,WHITE);
-		
 				while(E>0)
 				{
 					if(ICValue){	
@@ -124,14 +104,10 @@ class Shape : public Pixel
 					X+=Xs;
 				E+=2*Dy;
 			}
-	
 			cout<<"\nLine Plotted Using Bressenahms Line Drawing Algorithm";
 			delay(20000);
 			closegraph();
 		}
-		
-	
-
 };
 
 /*
