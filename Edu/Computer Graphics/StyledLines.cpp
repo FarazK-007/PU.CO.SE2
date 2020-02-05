@@ -4,7 +4,6 @@
 using namespace std;
 
 int gd = DETECT,gm;
-
 class Pixel{
 
 
@@ -117,21 +116,21 @@ class Shape : public Pixel
 				switch(drawingmode){
 				
 				case 0:
-					putpixel(X,Y,WHITE);
+					putpixel(X,Y,WHITE);			//Simple Bresenahms Line Drawing
 					break;
 				
 				case 1:
 					if(I%2 == 0)
-						putpixel(X,Y,WHITE);
+						putpixel(X,Y,WHITE);		//Dotted Line Drawing
 					break;
 				
 				case 2:
 					if(I%5 != 0)
-						putpixel(X,Y,WHITE);
+						putpixel(X,Y,WHITE);		//Dashed Line
 					break;
 				
 				case 3:
-					if(!((I)%7 == 5 || (I)%7 == 0))
+					if(!((I)%7 == 5 || (I)%7 == 0))		//Dash-Dot-Dash Line
 						putpixel(X,Y,WHITE);
 					break;
 				
@@ -166,53 +165,6 @@ class Shape : public Pixel
 
 };
 
-
-void drawPoly(int Total_Sides)
-{/*
-	int Xi=50,Yi=90,Xt=90,Yt=50,Xn=90,Yn=90;
-	int Sides = Total_Sides;
-
-	if(Sides>2){
-		initgraph(&gd,&gm,NULL);
-		Shape D;
-		
-
-		cout<<"\nEnter Intial X And Y => ";
-		cin>>Xi>>Yi;
-		
-		cout<<"\nEnter Next X And Y => ";
-		cin>>Xt>>Yt;
-				
-		
-			
-		D.drawLine(Xi,Yi,Xt,Yt);
-				
-		cout<<"\nEnter Next X And Y => ";
-		cin>>Xn>>Yn;
-		
-		D.drawLine(Xt,Yt,Xn,Yn);
-		
-				
-		while((Sides-3)>0)
-		{
-			Xt = Xn;
-			Yt = Yn;
-			
-			cout<<"\nEnter Next X And Y => ";
-			cin>>Xn>>Yn;
-			D.drawLine(Xt,Yt,Xn,Yn);
-			Sides--;
-		}
-		
-		D.drawLine(Xi,Yi,Xn,Yn);
-		
-		delay(20000);
-		closegraph();	
-	}
-	else
-		cout<<"\n#Not Polygon\n";	*/
-}
-
 int main(){
 
 	int ch;
@@ -221,14 +173,12 @@ int main(){
 
 	cout<<"\nLine Drawing Algorithms\nChoose Algorithm-";
 	do{
-		cout<<"\n\t1)DDA\n\t2)Bressenhams\n\t3)Polygon Drawing\n\t4)DotLine Drawing\n\t=> ";
+		cout<<"\n\t1)DDA\n\t2)Bressenhams\n\t3)DotLine Drawing\n\t=> ";
 		cin>>ch;
 
 		switch(ch)
 		{
 		case 1: 
-
-			Shape B;
 			B.drawLine();
 			break;
 		case 2: 
@@ -236,14 +186,7 @@ int main(){
 			cin>>x1>>y1>>x2>>y2;
 			B.drawLine(x1,y1,x2,y2,0);
 			break;
-		case 3: 
-			cout<<"\nEnter Number Of Polygon Sides\n";
-			int s;
-			cin>>s;
-			drawPoly(s);
-			break;
-		case 4: 		
-	
+		case 3: 		
 			cout<<"\nChoose Style :\n1)Dotted .....\n2)Dashed _ _ _\n3)Dash Dot _ . _ \n=> ";		
 			cin>>dm;				
 			cout<<"\nEnter X1,Y1 and X2,Y2 Values For Styled Line Drawing\n";
