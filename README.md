@@ -1,2 +1,3 @@
 # PU.CO.SE2 SPPU 2015 Ptrn
-SSPU Computer Engineering Second Year Sem 2
+# SPPU Computer Engineering Second Year Second Semester Lab Codes
+Don't forget to follow on Github, Be Updated
