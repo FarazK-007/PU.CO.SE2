@@ -134,7 +134,7 @@ class Shape : public Pixel
 
 };
 
-
+/*
 void drawPoly(int Total_Sides)
 {
 	int Xi=50,Yi=90,Xt=90,Yt=50,Xn=90,Yn=90;
@@ -180,6 +180,7 @@ void drawPoly(int Total_Sides)
 	else
 		cout<<"\n#Not Polygon\n";
 }
+*/
 
 int main(){
 
@@ -199,9 +200,10 @@ int main(){
 		case 2: 
 			Shape B;
 			int x1,x2,y1,y2;
-			cout<<"\nEnter X1,Y1 and X2,Y2 Values For Line Drawing Using Bressenhams Algorithm\n\t=> ";
-			cin>>x1>>y1>>x2>>y2;
-			B.drawLine(x1,y1,x2,y2);
+			cout<<"\nUndeveloped";
+			//cout<<"\nEnter X1,Y1 and X2,Y2 Values For Line Drawing Using Bressenhams Algorithm\n\t=> ";
+			//cin>>x1>>y1>>x2>>y2;
+			//B.drawLine(x1,y1,x2,y2);
 			break;
 		case 3: 
 			cout<<"\nEnter Number Of Polygon Sides\n";
